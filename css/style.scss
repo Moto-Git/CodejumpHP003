@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    // box-sizingの初期値はcontent-box
+    // box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+// font setting
+body {
+    color: #333;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+p {
+    // font-family: sans-serif;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    line-height: 1;
+    // font-weight: 500;
+}
+
+// font setting end
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+        list-style: none;
+        font-size: 12px // list-style-position: inside;
+    }
+}
+
+.header {
+    .header_width {
+        width: 1000px;
+        margin: 0 auto;
+        border-bottom: 1px solid black;
+
+        .header_logo {
+            margin-top: 40px;
+
+            h1 {
+                text-align: center;
+            }
+        }
+
+        .header_sbs {
+            display: flex;
+            justify-content: space-between;
+            width: 800px;
+            margin: 26px auto 24px;
+
+            li {
+                margin-left: 10px;
+                letter-spacing: 0.2px;
+
+                &:first-child {
+                    margin-left: initial;
+                }
+            }
+        }
+    }
+}
+
+.item {
+    .item_sbs {
+        width: 800px;
+        height: 815px;
+        margin: 50px auto 0;
+        display: flex;
+
+        .item_img {
+            width: 50%;
+        }
+
+        .item_txt {
+            width: 50%;
+            padding-left: 60px;
+
+            .item_txt_title {
+                h2 {
+                    font-size: 14px;
+                    font-weight: 700;
+                    border-top: 1px solid black;
+                    border-bottom: 1px solid black;
+                    padding: 19px 0;
+                }
+            }
+
+            .item_txt_p {
+                padding-top: 20px;
+
+                p {
+                    font-size: 12px;
+                    letter-spacing: 0px;
+                    line-height: 1.9;
+                }
+            }
+
+            .item_cost {
+                padding-top: 30px;
+
+                p {
+                    font-size: 11px;
+                    letter-spacing: 0px;
+                    line-height: 1.9;
+                    padding-left: 3px;
+                }
+            }
+
+            .item_sheet {
+                padding-top: 29px;
+
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+
+                td {
+                    border: 1px solid black;
+                    padding: 8px;
+                    text-align: center;
+                    font-size: 11px;
+                    padding: 11px 0;
+                }
+
+                /* Remove the outer borders */
+                tr:first-child td {
+                    border-top: none;
+                }
+
+                tr:last-child td {
+                    border-bottom: none;
+                }
+
+                td:first-child {
+                    border-left: none;
+                }
+
+                td:last-child {
+                    border-right: none;
+                }
+
+                /* Set column widths */
+                colgroup col:nth-child(1),
+                colgroup col:nth-child(2) {
+                    width: 20%;
+                }
+
+                colgroup col:nth-child(3) {
+                    width: 80%;
+                }
+            }
+
+            .button {
+                margin-top: 19px;
+
+                button {
+
+                    width: 340px;
+                    height: 48px;
+                    background-color: black;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 11px;
+                }
+            }
+
+            .item_size_sheet {
+                margin-top: 29px;
+
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+
+                td {
+                    border: 1px solid black;
+                    padding: 8px;
+                    text-align: center;
+                    font-size: 11px;
+                    padding: 10px 0;
+                }
+
+                /* Set column widths */
+                colgroup col:nth-child(1) {
+                    width: 11%;
+                    background-color: #eee;
+                }
+                
+                colgroup col:nth-child(2),
+                colgroup col:nth-child(3),
+                colgroup col:nth-child(4) {
+                    width: 20%;
+                }
+                .first_t {
+                    background-color: #eee;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    height: 20px;
+    p {
+        text-align: center;
+        font-size: 9px;
+        letter-spacing: 0.2px;
+    }
+}
